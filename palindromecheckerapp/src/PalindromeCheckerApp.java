@@ -1,26 +1,20 @@
+import java.util.Scanner;
 public class PalindromeCheckerApp {
     public static void main(String[] args) {
 
-        // ---------------------------------------------------------------
-        // 1️⃣  Print the application header
-        // ---------------------------------------------------------------
-        System.out.println("========================================");
-        System.out.println("       Welcome to Palindrome Checker!");
-        System.out.println("========================================");
+        Scanner scanner = new Scanner(System.in);
+        System.out.print("Enter a string to check: ");
+        String str = scanner.nextLine();
+        String reversed = "";
+        for (int i = str.length() - 1; i >= 0; i--) {
+            reversed = reversed + str.charAt(i);
+        }
+        if (str.equals(reversed)) {
+            System.out.println("\"" + str + "\" is a PALINDROME");
+        } else {
+            System.out.println("\"" + str + "\" is NOT a palindrome");
+        }
+        scanner.close();
 
-        // ---------------------------------------------------------------
-        // 2️⃣  Print application metadata
-        // ---------------------------------------------------------------
-        System.out.println("Application Name : Palindrome Checker");
-        System.out.println("Version          : 1.0");
-        System.out.println("========================================");
-
-        // ---------------------------------------------------------------
-        // 3️⃣  (Optional) Indicate that the program will continue to the
-        //     next use‑case or exit. Here we simply finish.
-        // ---------------------------------------------------------------
-        System.out.println("\nStarting Palindrome validation... (UC2 will follow)");
-        // In a full application you would now call the next use‑case,
-        // e.g., new PalindromeService().processInput();
     }
 }
