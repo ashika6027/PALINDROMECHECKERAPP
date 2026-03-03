@@ -2,7 +2,11 @@ import java.util.Locale;
 import java.util.Scanner;
 import java.util.Stack;
 
-public class PalindromeCheckerApp {
+import java.util.Locale;
+import java.util.Scanner;
+import java.util.Stack;
+
+public class PalindromeCheckerApp{
     public static void main(String[] args){
         Scanner input = new Scanner(System.in);
         System.out.print("Enter the text: ");
